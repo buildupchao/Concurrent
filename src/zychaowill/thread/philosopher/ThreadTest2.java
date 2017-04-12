@@ -1,4 +1,4 @@
-package zychaowill.thread;
+package zychaowill.thread.philosopher;
 
 /**
  * 解决哲学家进餐问题

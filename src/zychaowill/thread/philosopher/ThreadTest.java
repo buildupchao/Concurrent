@@ -1,5 +1,12 @@
-package zychaowill.thread;
+package zychaowill.thread.philosopher;
 
+/**
+ * 
+ * @Description 哲学家就餐问题
+ * @author yachao
+ * @date 2017年4月12日
+ * @version V1.0
+ */
 /*每个哲学家相当于一个线程*/
 class Philosopher extends Thread {
 	private String name;
