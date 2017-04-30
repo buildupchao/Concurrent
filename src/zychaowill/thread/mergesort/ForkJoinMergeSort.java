@@ -27,7 +27,7 @@ public class ForkJoinMergeSort implements SortStrategy {
 	 * @date 2017年4月12日
 	 * @version V1.0
 	 */
-	public static class MergeSort extends RecursiveAction {
+	private static class MergeSort extends RecursiveAction {
 
 		private static final long serialVersionUID = 6432344528875959985L;
 		private int[] intArr;
