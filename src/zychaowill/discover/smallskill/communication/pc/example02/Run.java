@@ -1,4 +1,4 @@
-package zychaowill.discover.smallskill.pc.example02;
+package zychaowill.discover.smallskill.communication.pc.example02;
 
 public class Run {
 	public static void main(String[] args) throws InterruptedException {

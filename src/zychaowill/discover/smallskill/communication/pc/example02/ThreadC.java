@@ -1,4 +1,4 @@
-package zychaowill.discover.smallskill.pc.example01;
+package zychaowill.discover.smallskill.communication.pc.example02;
 
 public class ThreadC extends Thread {
 	private Consumer consumer;

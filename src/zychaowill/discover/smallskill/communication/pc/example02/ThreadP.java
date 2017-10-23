@@ -1,4 +1,4 @@
-package zychaowill.discover.smallskill.pc.example01;
+package zychaowill.discover.smallskill.communication.pc.example02;
 
 public class ThreadP extends Thread {
 	private Producer producer;

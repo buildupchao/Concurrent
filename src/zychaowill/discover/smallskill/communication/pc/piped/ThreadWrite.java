@@ -1,4 +1,4 @@
-package zychaowill.discover.smallskill.pc.piped;
+package zychaowill.discover.smallskill.communication.pc.piped;
 
 import java.io.PipedOutputStream;
 

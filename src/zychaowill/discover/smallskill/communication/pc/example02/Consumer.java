@@ -1,6 +1,6 @@
-package zychaowill.discover.smallskill.pc.example01;
+package zychaowill.discover.smallskill.communication.pc.example02;
 
-import zychaowill.discover.smallskill.pc.ValueObject;
+import zychaowill.discover.smallskill.communication.pc.ValueObject;
 
 public class Consumer {
 	private String lock;
@@ -14,11 +14,12 @@ public class Consumer {
 		try {
 			synchronized (lock) {
 				if (ValueObject.value.equals("")) {
+					System.out.println("Consumer " + Thread.currentThread().getName() + " WAITING");
 					lock.wait();
 				}
-				System.out.println("get的值是" + ValueObject.value);
+				System.out.println("Consumer " + Thread.currentThread().getName() + " RUNNABLE");
 				ValueObject.value = "";
-				lock.notify();
+				lock.notifyAll();
 			}
 		} catch (InterruptedException ex) {
 			ex.printStackTrace();

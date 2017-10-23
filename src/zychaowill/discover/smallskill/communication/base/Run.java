@@ -1,4 +1,4 @@
-package zychaowill.discover.smallskill.communication;
+package zychaowill.discover.smallskill.communication.base;
 
 public class Run {
 	public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package zychaowill.discover.smallskill.communication;
+package zychaowill.discover.smallskill.communication.base;
 
 import java.util.ArrayList;
 import java.util.List;

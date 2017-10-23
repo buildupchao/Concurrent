@@ -1,4 +1,4 @@
-package zychaowill.discover.smallskill.communication;
+package zychaowill.discover.smallskill.communication.base;
 
 public class ThreadB extends Thread {
 

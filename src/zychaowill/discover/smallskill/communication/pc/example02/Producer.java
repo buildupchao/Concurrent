@@ -1,6 +1,6 @@
-package zychaowill.discover.smallskill.pc.example02;
+package zychaowill.discover.smallskill.communication.pc.example02;
 
-import zychaowill.discover.smallskill.pc.ValueObject;
+import zychaowill.discover.smallskill.communication.pc.ValueObject;
 
 public class Producer {
 	private String lock;

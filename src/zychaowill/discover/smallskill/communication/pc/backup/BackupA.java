@@ -1,4 +1,4 @@
-package zychaowill.discover.smallskill.pc.backup;
+package zychaowill.discover.smallskill.communication.pc.backup;
 
 public class BackupA extends Thread {
 	
