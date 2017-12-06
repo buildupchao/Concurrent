@@ -20,7 +20,7 @@ class Student {
 		this.age = age;
 
 		this.flag = true;
-		this.notify();
+		this.notifyAll();
 	}
 
 	// 消费者的功能,打印sutdent对象的内容
@@ -36,7 +36,7 @@ class Student {
 		System.out.println(name + ":::" + age);
 
 		this.flag = false;
-		this.notify();
+		this.notifyAll();
 	}
 
 }

@@ -20,7 +20,7 @@ public class ProducerAndConsumer {
 					++counter;
 					System.out.println(new StringBuilder("生产一个产品, counter is ").append(counter));
 					
-					LOCK.notify();
+					LOCK.notifyAll();
 				}
 			}
 		}).start();
@@ -41,7 +41,7 @@ public class ProducerAndConsumer {
 					--counter;
 					System.out.println(new StringBuilder("消费一个产品, counter is ").append(counter));
 					
-					LOCK.notify();
+					LOCK.notifyAll();
 				}
 			}
 		}).start();
