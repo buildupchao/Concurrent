@@ -1,11 +1,17 @@
 package zychaowill.discover.research.simplify;
 
 import java.io.Serializable;
+import java.util.Arrays;
 import java.util.Collection;
+import java.util.Objects;
 import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.Condition;
 import java.util.concurrent.locks.ReentrantLock;
+import java.util.stream.Collectors;
 
+import lombok.extern.slf4j.Slf4j;
+
+@Slf4j
 public class PCBlockingQueue<E> implements Serializable {
 
 	private static final long serialVersionUID = -2471645308014698465L;
@@ -54,10 +60,20 @@ public class PCBlockingQueue<E> implements Serializable {
 		}
 	}
 
-	public boolean offer(E e) throws InterruptedException {
+	public boolean add(E e) {
+		if (offer(e))
+			return true;
+		else
+			throw new IllegalStateException("Queue Full");
+	}
+	
+	/**
+	 * @throws NullPointerException if the specified element is null 
+	 */
+	public boolean offer(E e) {
 		checkNonNull(e);
 		final ReentrantLock lock = this.lock;
-		lock.lockInterruptibly();
+		lock.lock();
 		try {
 			if (count == items.length)
 				return false;
@@ -70,11 +86,48 @@ public class PCBlockingQueue<E> implements Serializable {
 		}
 	}
 	
-	public boolean offer(E e, TimeUnit unit) {
+	public boolean offer(E e, long timeout, TimeUnit unit) throws InterruptedException {
 		checkNonNull(e);
+		long nanos = unit.toNanos(timeout);
 		final ReentrantLock lock = this.lock;
-		
-		return false;
+		lock.lockInterruptibly();
+		try {
+			while (count == items.length) {
+				if (nanos <= 0)
+					return false;
+				nanos = notFull.awaitNanos(nanos);
+			}
+			enqueue(e);
+			return true;
+		} finally {
+			lock.unlock();
+		}
+	}
+	
+	public E poll() throws InterruptedException {
+		final ReentrantLock lock = this.lock;
+		lock.lockInterruptibly();
+		try {
+			return (count == 0) ? null : dequeue();
+		} finally {
+			lock.unlock();
+		}
+	}
+	
+	public E poll(long timeout, TimeUnit unit) throws InterruptedException {
+		long nanos = unit.toNanos(timeout);
+		final ReentrantLock lock = this.lock;
+		lock.lockInterruptibly();
+		try {
+			while (count == 0) {
+				if (nanos <= 0)
+					return null;
+				nanos = notEmpty.awaitNanos(nanos);
+			}
+			return dequeue();
+		} finally {
+			lock.unlock();
+		}
 	}
 	
 	/**
@@ -92,6 +145,7 @@ public class PCBlockingQueue<E> implements Serializable {
 			while (count == items.length)
 				notFull.await();
 			enqueue(e);
+			log.info("Put a product. -> " + e);
 		} finally {
 			lock.unlock();
 		}
@@ -112,7 +166,9 @@ public class PCBlockingQueue<E> implements Serializable {
 		try {
 			while (count == 0)
 				notEmpty.await();
-			return dequeue();
+			E x = dequeue();
+			log.info("Take a product. -> " + x);
+			return x;
 		} finally {
 			lock.unlock();
 		}
@@ -123,25 +179,53 @@ public class PCBlockingQueue<E> implements Serializable {
 		@SuppressWarnings("unchecked")
 		E e = (E) items[takeIndex];
 		items[takeIndex] = null;
-		if (takeIndex == items.length)
+		if (++takeIndex == items.length)
 			takeIndex = 0;
 		count--;
 		notFull.signal();
 		return e;
 	}
 	
-	public int size() throws InterruptedException {
+	public int size() {
 		final ReentrantLock lock = this.lock;
-		lock.lockInterruptibly();
+		lock.lock();
 		try {
 			return count;
 		} finally {
 			lock.unlock();
 		}
 	}
+	
+	public E peek() {
+		final ReentrantLock lock = this.lock;
+		lock.lock();
+		try {
+			return itemAt(takeIndex);
+		} finally {
+			lock.unlock();
+		}
+	}
+
+	@SuppressWarnings("unchecked")
+	final E itemAt(int i) {
+		return (E) items[i];
+	}
 
 	private void checkNonNull(E e) {
 		if (e == null)
 			throw new NullPointerException();
+	}
+	
+	public String joining() {
+		final Object[] items = this.items;
+		final ReentrantLock lock = this.lock;
+		lock.lock();
+		try {
+			return "["
+					+ Arrays.stream(items).filter(Objects::nonNull).map(String::valueOf).collect(Collectors.joining(","))
+					+ "]";
+		} finally {
+			lock.unlock();
+		}
 	}
 }
