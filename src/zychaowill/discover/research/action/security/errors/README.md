@@ -26,3 +26,27 @@ Exception in thread "Thread-0" java.lang.ArrayIndexOutOfBoundsException: 163
 
 ![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-03_141639.bmp)
 ![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-03_141839.bmp)
+
+<br/>
+<br/>
+<br/>
+
+##### Reference Link
+
+- [这篇文章生动形象地描述了线程和进程](http://www.qnx.com/developers/docs/6.4.1/neutrino/getting_started/s1_procs.html)
+
+- [有关线程的状态机](http://www.cnblogs.com/skywang12345/p/3479024.html)
+
+- [对线程中断给出极其详细的描述](http://ibruce.info/2013/12/19/how-to-stop-a-java-thread/)
+
+- [对Java虚拟机的Server和Client模式进行了说明](http://www.uucode.net/201406/jvm-server-client-mode)
+
+- [线程组的概念与使用](http://ifeve.com/thread-management-11/)
+
+- [有关守护线程详尽描述](http://blog.csdn.net/lcore/article/details/12280027)
+
+- [HashMap在多线程卡死的细节分析](http://coolshell.cn/articles/9606.html)
+
+- [WeakHashMap多线程卡死的实际案例](http://www.uucode.net/201412/weakhashmap-endless-loop)
+
+- [HashMap的实现原理](http://www.uucode.net/201503/hashmap-hash-col)
