@@ -15,3 +15,11 @@ public ThreadPoolExecutor(int corePoolSize, // 指定了线程池中的线程数
 ![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-03_153603.bmp)
 ![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-03_153700.bmp)
 ![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-03_153715.bmp)
+
+<br/>
+<br/>
+- ThreadFactory
+
+```Java
+	Thread newThread(Runnable r)
+```
