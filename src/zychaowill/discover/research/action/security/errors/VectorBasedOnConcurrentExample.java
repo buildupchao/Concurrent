@@ -1,23 +1,16 @@
 package zychaowill.discover.research.action.security.errors;
 
-import java.util.ArrayList;
+import java.util.Vector;
 
-/**
- * Advise: Please replace ArrayList with Vector.
- * @see
- *
- * @author jangz
- * @since
- */
-public class ArrayListBasedOnConcurrentExample {
-	static ArrayList<Integer> list = new ArrayList<>(10);
+public class VectorBasedOnConcurrentExample {
+	static Vector<Integer> vector = new Vector<>(10);
 	
 	public static class AddThread implements Runnable {
 
 		@Override
 		public void run() {
 			for (int i = 0; i < 1_000_000; i++)
-				list.add(i);
+				vector.add(i);
 		}
 	}
 	
@@ -28,6 +21,6 @@ public class ArrayListBasedOnConcurrentExample {
 		t2.start();
 		t1.join();
 		t2.join();
-		System.out.println(list.size());
+		System.out.println(vector.size());
 	}
 }
