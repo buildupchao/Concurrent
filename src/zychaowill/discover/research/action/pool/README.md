@@ -23,3 +23,21 @@ public ThreadPoolExecutor(int corePoolSize, // 指定了线程池中的线程数
 ```Java
 	Thread newThread(Runnable r)
 ```
+<br/>
+<br/>
+- ThreadPoolExecutor是一个可以扩展的线程池。他提供了beforeExecute(), afterExecute()和terminated()三个接口对线程池进行控制
+
+
+##### Reference Link
+
+- [ScheduledThreadPoolExecutor的使用注意事项](http://segmentfault.com/a/1190000000371905)
+
+- [线程池的几个使用技巧](http://it.deepinmind.com/java/2014/11/26/executorservice-10-tips-and-tricks.html)
+
+- [有关Fork/Join的简单实现原理](http://www.infoq.com/cn/articles/fork-join-introduction)
+
+- 有关ConcurrentLinkedQueue的实现具体分析
+	- [http://my.oschina.net/xianggao/blog/389332](http://my.oschina.net/xianggao/blog/389332)
+	- [http://www.ibm.com/developerworks/cn/java/j-lo-concurrent/](http://www.ibm.com/developerworks/cn/java/j-lo-concurrent/)
+	
+- [有关ConcurrentSkipListMap的运作原理](http://www.liuhaihua.cn/archives/40657.html)
