@@ -15,7 +15,8 @@ public static List<String> list = Collections.synchronizedList(new LinkedList<St
 ```
 此时生成的List对象 就是线程安全的。
 
-- ConcurrentLinkedQueue
+- 高效读写的队列：ConcurrentLinkedQueue
+
 
 - BlockingQueue
 
