@@ -1,7 +1,7 @@
 package zychaowill.discover.research.action.security.errors;
 
 /**
- * 
+ * Stack over flow problem.
  * @see
  *
  * @author jangz
