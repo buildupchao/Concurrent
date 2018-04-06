@@ -1,4 +1,4 @@
-JDK提供的并发集合容器大部分在```Java java.util.concurrent ```包中。
+JDK提供的并发集合容器大部分在``` java.util.concurrent ```包中。
 
 - ConcurrentHashMap
 
@@ -10,6 +10,10 @@ Collections.synchronizedMap()会生成一个名为SynchronizedMap的Map。它使
 ![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_162830.bmp)
 
 - CopyOnWriteArrayList
+```Java
+public static List<String> list = Collections.synchronizedList(new LinkedList<String>());
+```
+此时生成的List对象 就是线程安全的。
 
 - ConcurrentLinkedQueue
 
