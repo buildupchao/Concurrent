@@ -4,7 +4,7 @@
 <br/>
 <br/>
 volatile对于保证操作的原子性是有非常大的帮助的。但是需要注意的是，volatile并不能代替锁，它也无法保证一些复合操作的原子性。<br/>
-Please refer to CannotGuranterrAtomicityOperation class.<br/>
+Please refer to CannotGuaranteeAtomicityOperation class.<br/>
 <br/>
 volatile也能保证数据的可见性和有序性。<br/>
 <br/>
