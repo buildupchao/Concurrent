@@ -39,8 +39,12 @@ private static class Node<E> {
 <br/>
 我们既希望线程A能够通知线程B，又希望线程A不知道线程B的存在。这样，如果将来进行重构或者升级，我们完全可以不修改线程A，而直接把线程B升级为线程C，保证系统的平滑过渡。
 <br/>
-![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_171650.bmp)<br/>
-![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_171747.bmp)<br/>
+<br/>
+![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_171650.bmp)
+
+![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_171747.bmp)
+
 ![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_171819.bmp)
+<br/>
 <br/>
 - ConcurrentSkipListMap
