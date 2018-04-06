@@ -25,5 +25,6 @@ public class SemaphoreExample implements Runnable {
 		final SemaphoreExample example = new SemaphoreExample();
 		for (int i = 0; i < 20; i++)
 			executors.submit(example);
+		executors.shutdown();
 	}
 }
