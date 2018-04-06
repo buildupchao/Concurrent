@@ -48,4 +48,14 @@ private static class Node<E> {
 ![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_171819.bmp)
 <br/>
 <br/>
+
 - ConcurrentSkipListMap
+
+在高并发环境下，对于平衡树，你需要一个全局锁来保证整个平衡树的线程安全。而对于跳表，你只需要部分锁即可。这样，在高并发环境下，你就可以拥有更好的性能。而就查询的性能而言，跳表的时间复杂度也是O(logn)。所以，在并发数据结构中，JDK使用跳表来实现一个Map。<br/>
+![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_172911.bmp)
+
+![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_172951.bmp)
+
+![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_173041.bmp)
+
+![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_173055.bmp)
