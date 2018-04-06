@@ -62,14 +62,14 @@ private static class Node<E> {
 
 #### Reference Link
 
-- ![ScheduledThreadPoolExecutor的使用注意事项](http://segmentfault.com/a/1190000000371905)
+- [ScheduledThreadPoolExecutor的使用注意事项](http://segmentfault.com/a/1190000000371905)
 
-- ![线程池的使用技巧](http://it.deepinmind.com/java/2014/11/26/executorservice-10-tips-and-tricks.html)
+- [线程池的使用技巧](http://it.deepinmind.com/java/2014/11/26/executorservice-10-tips-and-tricks.html)
 
-- ![有关Fork/Join的简单实现原理](http://www.infoq.com/cn/articles/fork-join-introduction)
+- [有关Fork/Join的简单实现原理](http://www.infoq.com/cn/articles/fork-join-introduction)
 
 - 有关ConcurrentLinkedQueue的实现具体分析
-	- ![http://my.oschina.net/xianggao/blog/389332](http://my.oschina.net/xianggao/blog/389332)
-	- ![http://www.ibm.com/developerworks/cn/java/j0lo-concurrent/](http://www.ibm.com/developerworks/cn/java/j0lo-concurrent/)
+	- [http://my.oschina.net/xianggao/blog/389332](http://my.oschina.net/xianggao/blog/389332)
+	- [http://www.ibm.com/developerworks/cn/java/j0lo-concurrent/](http://www.ibm.com/developerworks/cn/java/j0lo-concurrent/)
 	
-- ![有关ConcurrentSkipListMap的运行原理（示例图示很好）](http://www.liuhaihua.cn/archives/40657.html)
+- [有关ConcurrentSkipListMap的运行原理（示例图示很好）](http://www.liuhaihua.cn/archives/40657.html)
