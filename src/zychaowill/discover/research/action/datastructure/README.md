@@ -21,6 +21,7 @@ private static class Node<E> {
 	volatile E item;
 	volatile Node<E> next;
 ```
+![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_163816.bmp)
 
 - BlockingQueue
 
