@@ -53,3 +53,14 @@ class Singleton {
 	// other methods and fields
 }
 ```
+<br/><br/>
+【参考】volatile解决多线程内存不可见问题。对于一写多读，是可以解决变量同步问题，但是如果多写，同样无法解决线程安全问题。如果是count++操作，使用如下类实现：<br/>
+```Java
+AtomicInteger count = new AtomicInteger();
+count.addAndGet(1);
+```
+<br/>
+如果是JDK8，推荐使用LongAdder对象，比AtomicLong性能更好（减少乐观锁的重试次数）。
+<br/><br/>
+【参考】ThreadLocal无法解决共享对象的更新问题，ThreadLocal对象建议使用static修饰。这个变量是针对一个线程内所有操作共享的，所以设置为静态变量，所有此类实例共享此静态变量，也就是说在类第一次被使用时装载，只分配一块存储空间，所有此类的对象（只要是这个线程内定义的）都可以操作这个变量。
+<br/><br/>
