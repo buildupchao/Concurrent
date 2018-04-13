@@ -5,7 +5,7 @@ import java.util.Random;
 public class NumberFactory {
 
 	public static Integer[] integers(Integer size) {
-		size = size == null ? 10: size;
+		size = (size == null ? 10: size);
 		Integer[] numbers = new Integer[size];
 		Random random = new Random();
 		for (int i = 0; i < size.intValue(); i++) {
