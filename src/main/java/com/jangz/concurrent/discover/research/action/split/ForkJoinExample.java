@@ -23,7 +23,7 @@ public class ForkJoinExample<T> extends RecursiveAction {
 		this.high = elements.length;
 	}
 	
-	public ForkJoinExample(T[] elements, Comparator<T> comparator, int low, int high) {
+	private ForkJoinExample(T[] elements, Comparator<T> comparator, int low, int high) {
 		this(elements, comparator);
 		this.low = low;
 		this.high = high;
@@ -65,7 +65,7 @@ public class ForkJoinExample<T> extends RecursiveAction {
 	}
 
 	private void sequentiallySort(T[] elements, int low, int high) {
-		Arrays.stream(elements).sorted(comparator).collect(Collectors.toList()).toArray(elements);
+		Arrays.stream(elements).sorted(comparator).collect(Collectors.toList()).toArray(this.elements);
 	}
 
 }
