@@ -13,6 +13,7 @@ public class CyclicBarrierExample {
 			super();
 			this.soldier = soldier;
 			this.cyclic = cyclic;
+			System.out.printf("Soldier%s sign in!\n", soldier);
 		}
 
 		@Override
@@ -67,7 +68,6 @@ public class CyclicBarrierExample {
 		
 		System.out.println("Fall In!");
 		for (int i = 0; i < N; i++) {
-			System.out.println("Soldier" + i + ": sign in!");
 			allSoldier[i] = new Thread(new Soldier(String.valueOf(i), cyclic));
 			Thread.sleep(1000);
 			allSoldier[i].start();
