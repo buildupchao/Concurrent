@@ -71,7 +71,7 @@ public final class CustomThreadPool {
             }
         }
         for (int i = 0; i < workerNum; i++) {
-
+        	workThreads[i].stopWorker();
         }
     }
 
