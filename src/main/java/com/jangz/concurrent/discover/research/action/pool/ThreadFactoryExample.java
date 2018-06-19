@@ -45,5 +45,6 @@ public class ThreadFactoryExample {
 			executors.submit(task);
 		}
 		Thread.sleep(2000);
+		executors.shutdown();
 	}
 }

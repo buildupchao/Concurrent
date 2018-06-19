@@ -37,5 +37,6 @@ public class RejectThreadPoolExample {
 			executors.submit(task);
 			Thread.sleep(10);
 		}
+		executors.shutdown();
 	}
 }

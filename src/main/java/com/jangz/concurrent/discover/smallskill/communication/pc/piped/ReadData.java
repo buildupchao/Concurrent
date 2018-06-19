@@ -11,7 +11,7 @@ public class ReadData {
 		int len = -1;
 			while ((len = in.read(buffer)) != -1) {
 				String newData = new String(buffer, 0, len);
-				System.out.print(newData);
+				System.out.print(newData + "\t");
 			}
 			System.out.println();
 		} catch (IOException e) {
