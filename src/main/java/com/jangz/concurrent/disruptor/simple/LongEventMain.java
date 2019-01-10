@@ -14,7 +14,8 @@ import java.util.concurrent.Executors;
  */
 public class LongEventMain {
 
-    public static void main(String[] args) {
+    @SuppressWarnings("unchecked")
+	public static void main(String[] args) {
         ExecutorService executor = Executors.newCachedThreadPool();
         LongEventFactory eventFactory = new LongEventFactory();
         int ringBufferSize = 1024 * 1024;
