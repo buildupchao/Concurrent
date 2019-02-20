@@ -14,9 +14,9 @@ public <T> ForkJoinTask<T> submit(ForkJoinTask<T> task)
 
 （Note:不同版本的JDK内部实现机制可能有差异，从而导致其表现不同。）
 <br/>
-![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_162051.bmp)
+![](https://github.com/buildupchao/ImgStore/blob/master/Java/images/2018-04-06_162051.bmp)
 <br/>
 <br/>
 
-![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_161255.bmp)
-![](https://github.com/Zychaowill/ImgStore/blob/master/Java/images/2018-04-06_160839.bmp)
+![](https://github.com/buildupchao/ImgStore/blob/master/Java/images/2018-04-06_161255.bmp)
+![](https://github.com/buildupchao/ImgStore/blob/master/Java/images/2018-04-06_160839.bmp)
