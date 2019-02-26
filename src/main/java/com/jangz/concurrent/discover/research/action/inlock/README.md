@@ -6,3 +6,6 @@
 
 - 阻塞原语part()和unpark()，用来挂起和恢复线程。没有得到锁的线程将会被挂起。
 
+<h4>CountDownLatch</h4>
+
+- 如果出现await超时等待或者执行任务线程抛异常，均会返回false; 只有当任务无超时正常调用countDown()方法，await才会返回true

@@ -5,6 +5,12 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.TimeUnit;
 
+/**
+ * 	如果出现await超时等待或者执行任务线程抛异常，均会返回false; 只有当任务无超时正常调用countDown()方法，await才会返回true
+ * @author buildupchao
+ *         Date: 2019/02/26 15:06
+ * @since JDK 1.8
+ */
 public class CountDownLatchAdvancedExample {
 
 	public static void main(String[] args) {
@@ -16,7 +22,8 @@ public class CountDownLatchAdvancedExample {
 			ExecutorService executors = Executors.newFixedThreadPool(2);
 			CountDownLatch latch = new CountDownLatch(1);
 			executors.execute(new TestExample(latch));
-			latch.await(5, TimeUnit.SECONDS);
+			boolean waited = latch.await(5, TimeUnit.SECONDS);
+			System.out.println("waited/>" + waited);
 			System.out.println("DONE________________");
 			executors.shutdown();
 		} catch (InterruptedException ex) {
@@ -37,7 +44,7 @@ public class CountDownLatchAdvancedExample {
 		public void run() {
 			try {
 				System.out.println("WAITING________________");
-				Thread.sleep(5000);
+				Thread.sleep(4000);
 				System.out.println("WAITING FINISHED_______");
 			} catch (InterruptedException ex) {
 				ex.printStackTrace();
