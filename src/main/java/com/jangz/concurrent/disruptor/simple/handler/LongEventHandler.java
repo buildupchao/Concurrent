@@ -1,5 +1,6 @@
-package com.jangz.concurrent.disruptor.simple;
+package com.jangz.concurrent.disruptor.simple.handler;
 
+import com.jangz.concurrent.disruptor.simple.LongEvent;
 import com.lmax.disruptor.EventHandler;
 
 /**
