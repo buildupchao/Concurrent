@@ -8,3 +8,5 @@
 - [ReentrantLock](https://github.com/Zychaowill/Concurrent/tree/master/src/main/java/com/jangz/concurrent/discover/research/simplify)
 
 - [SingleInstance](https://github.com/Zychaowill/Concurrent/tree/master/src/main/java/com/jangz/concurrent/discover/research/pattern)
+
+- [Socket通信（责任分离案例）](https://github.com/buildupchao/Concurrent/tree/master/src/main/java/com/jangz/concurrent/discover/research/action/net)
