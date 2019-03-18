@@ -1,16 +1,17 @@
 package com.jangz.concurrent.discover.research.action.net;
 
-import com.google.common.collect.Queues;
-import org.apache.commons.lang3.concurrent.BasicThreadFactory;
-import org.slf4j.Logger;
-import org.slf4j.LoggerFactory;
-
-import java.io.IOException;
 import java.net.ServerSocket;
 import java.net.Socket;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.ThreadPoolExecutor;
 import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.IOUtils;
+import org.apache.commons.lang3.concurrent.BasicThreadFactory;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+import com.google.common.collect.Queues;
 
 /**
  * @author buildupchao
@@ -39,8 +40,9 @@ public class ServerAcceptor implements Runnable {
 
     @Override
     public void run() {
+    	ServerSocket acceptor = null;
         try {
-            ServerSocket acceptor = new ServerSocket(port);
+            acceptor = new ServerSocket(port);
             LOGGER.info("server acceptor starts, listens to port=[{}]", port);
 
 //            int i = 0;
@@ -60,6 +62,7 @@ public class ServerAcceptor implements Runnable {
         } catch (Exception e) {
             e.printStackTrace();
         } finally {
+        	IOUtils.closeQuietly(acceptor);
             LOGGER.info("server acceptor exits!");
         }
     }
