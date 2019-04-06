@@ -1,23 +1,33 @@
 package com.jangz.concurrent.disruptor.simple;
 
+import com.jangz.concurrent.disruptor.simple.event.LongEvent;
+import com.jangz.concurrent.disruptor.simple.factory.LongEventFactory;
 import com.jangz.concurrent.disruptor.simple.handler.LongEventHandler;
+import com.jangz.concurrent.disruptor.simple.producer.LongEventProducer;
 import com.lmax.disruptor.RingBuffer;
 import com.lmax.disruptor.YieldingWaitStrategy;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.ProducerType;
 
 import java.nio.ByteBuffer;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.*;
 
 /**
- * Created by jangz on 2019/1/9.
+ * @author buildupchao
+ * @date 2019/1/9
  */
 public class LongEventMain {
 
     @SuppressWarnings("unchecked")
 	public static void main(String[] args) {
-        ExecutorService executor = Executors.newCachedThreadPool();
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(
+                20,
+                20,
+                0,
+                TimeUnit.SECONDS,
+                new ArrayBlockingQueue<Runnable>(10),
+                new ThreadPoolExecutor.AbortPolicy()
+        );
         LongEventFactory eventFactory = new LongEventFactory();
         int ringBufferSize = 1024 * 1024;
 

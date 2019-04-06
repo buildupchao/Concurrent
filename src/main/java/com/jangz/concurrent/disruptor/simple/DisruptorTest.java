@@ -1,27 +1,40 @@
 package com.jangz.concurrent.disruptor.simple;
 
+import com.google.common.collect.Queues;
+import com.jangz.concurrent.disruptor.simple.event.LongEvent;
+import com.jangz.concurrent.disruptor.simple.factory.LongEventFactory;
 import com.jangz.concurrent.disruptor.simple.handler.*;
+import com.jangz.concurrent.disruptor.simple.producer.LongEventProducer;
 import com.lmax.disruptor.BlockingWaitStrategy;
 import com.lmax.disruptor.RingBuffer;
 import com.lmax.disruptor.dsl.Disruptor;
 import com.lmax.disruptor.dsl.ProducerType;
+import org.apache.commons.lang3.concurrent.BasicThreadFactory;
 import org.junit.Test;
 
 import java.nio.ByteBuffer;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
+import java.util.concurrent.ThreadPoolExecutor;
+import java.util.concurrent.TimeUnit;
 
 /**
  * @author buildupchao
  *         Date: 2019/3/16 03:40
  * @since JDK 1.8
  */
-public class DisruptorExamples {
+public class DisruptorTest {
 
 
     @Test
     public void testComplexCombineSequence() {
-        ExecutorService executor = Executors.newFixedThreadPool(20);
+        ThreadPoolExecutor executor = new ThreadPoolExecutor(
+                20,
+                20,
+                0,
+                TimeUnit.SECONDS,
+                Queues.newArrayBlockingQueue(10),
+                new BasicThreadFactory.Builder().namingPattern("disruptor-test-%d").daemon(true).build(),
+                new ThreadPoolExecutor.AbortPolicy()
+        );
         LongEventFactory eventFactory = new LongEventFactory();
         int bufferSize = 8;
 

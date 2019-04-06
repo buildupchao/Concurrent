@@ -1,10 +1,12 @@
 package com.jangz.concurrent.disruptor.simple.handler;
 
-import com.jangz.concurrent.disruptor.simple.LongEvent;
+import com.jangz.concurrent.disruptor.simple.event.LongEvent;
 import com.lmax.disruptor.EventHandler;
 
 /**
- * Created by jangz on 2019/1/9.
+ * 事件消费者（事件处理器）
+ * @author buildupchao
+ * @date 2019/1/9
  */
 public class LongEventHandler implements EventHandler<LongEvent> {
 
