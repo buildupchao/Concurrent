@@ -2,7 +2,7 @@ package com.buildupchao.concurrent.disruptor.examples;
 
 /**
  * @author buildupchao
- *         Date: 2019/3/17 14:55
+ * @date 2019/3/17 14:55
  * @since JDK 1.8
  */
 public class FalseSharing implements Runnable {
