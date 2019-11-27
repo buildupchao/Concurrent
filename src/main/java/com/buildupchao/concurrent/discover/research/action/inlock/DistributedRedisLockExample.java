@@ -1,6 +1,8 @@
 package com.buildupchao.concurrent.discover.research.action.inlock;
 
+import com.buildupchao.concurrent.utils.ConcurrentUtil;
 import com.google.common.collect.Queues;
+import org.apache.commons.lang3.concurrent.ConcurrentUtils;
 import redis.clients.jedis.JedisPool;
 import redis.clients.jedis.JedisPoolConfig;
 
@@ -46,18 +48,8 @@ public class DistributedRedisLockExample {
         System.out.println(Thread.currentThread().getName() + " release lock id: " + identifierValue);
     }
 
-    public static void main(String[] args) {
-        ThreadPoolExecutor executor = new ThreadPoolExecutor(
-                50,
-                50,
-                0L,
-                TimeUnit.SECONDS,
-                Queues.newArrayBlockingQueue(100),
-                new ThreadPoolExecutor.AbortPolicy()
-        );
+    public static void main(String[] args) throws InterruptedException {
         DistributedRedisLockExample distributedRedisLockExample = new DistributedRedisLockExample();
-        for (int i = 0; i < 50; i++) {
-            executor.execute(() -> distributedRedisLockExample.fire());
-        }
+        ConcurrentUtil.latch(1000, () -> distributedRedisLockExample.fire());
     }
 }
