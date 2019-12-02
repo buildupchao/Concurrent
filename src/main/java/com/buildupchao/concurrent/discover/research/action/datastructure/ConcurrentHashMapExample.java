@@ -4,9 +4,10 @@ import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * 
- * @see
+ * @see ConcurrentHashMap
+ * @see com.buildupchao.concurrent.discover.research.action.unsafe.datastructure.ConcurrentHashMapDeadLoopExample
  *
- * @author jangz
+ * @author buildupchao
  * @since
  */
 public class ConcurrentHashMapExample {
