@@ -14,8 +14,8 @@ public class ConditionTest {
 			@Override
 			public void run() {
 				reentrantLock.lock();
-				System.out.println(Thread.currentThread().getName() + "�õ���");
-				System.out.println(Thread.currentThread().getName() + "�ȴ��ź�");
+				System.out.println(Thread.currentThread().getName() + "?õ???");
+				System.out.println(Thread.currentThread().getName() + "??????");
 				
 				try {
 					condition.await();
@@ -23,17 +23,17 @@ public class ConditionTest {
 					e.printStackTrace();
 				}
 				
-				System.out.println(Thread.currentThread().getName() + "�õ��ź�");
+				System.out.println(Thread.currentThread().getName() + "?õ????");
 				reentrantLock.unlock();
 			}
-		}, "�߳�1").start();
+		}, "???1").start();
 		
 		new Thread(new Runnable() {
 			
 			@Override
 			public void run() {
 				reentrantLock.lock();
-				System.out.println(Thread.currentThread().getName() + "�õ���");
+				System.out.println(Thread.currentThread().getName() + "?õ???");
 				
 				try {
 					Thread.sleep(3000);
@@ -41,11 +41,11 @@ public class ConditionTest {
 					e.printStackTrace();
 				}
 				
-				System.out.println(Thread.currentThread().getName() + "�����ź�");
+				System.out.println(Thread.currentThread().getName() + "???????");
 				condition.signalAll();
 				reentrantLock.unlock();
 			}
-		}, "�߳�2").start();
+		}, "???2").start();
 	}
 	
 }

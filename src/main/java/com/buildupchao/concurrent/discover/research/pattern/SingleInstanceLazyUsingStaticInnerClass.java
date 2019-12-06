@@ -5,6 +5,9 @@ import java.io.Serializable;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author buildupchao
+ */
 @Slf4j
 public class SingleInstanceLazyUsingStaticInnerClass implements Serializable {
 

@@ -8,18 +8,16 @@ import java.io.ObjectInputStream;
 import java.io.ObjectOutputStream;
 
 import lombok.extern.slf4j.Slf4j;
+import org.junit.Test;
 
+/**
+ * @author buildupchao
+ */
 @Slf4j
 public class SingleInstanceExample {
 
-	public static void main(String[] args) {
-//		singleInstanceThread();
-//		singleInstanceLazyThread();
-//		singleInstanceLazyUsingStaticInnerClassThread();
-		usingStaticInnerClassWithSerializing();
-	}
-	
-	static void singleInstanceThread() {
+	@Test
+	public void singleInstanceThread() {
 		Runnable target = () -> log.info("Object id is {}.", SingleInstance.instance().hashCode());
 		Thread t1 = new Thread(target);
 		Thread t2 = new Thread(target);
@@ -28,8 +26,9 @@ public class SingleInstanceExample {
 		t2.start();
 		t3.start();
 	}
-	
-	static void singleInstanceLazyThread() {
+
+	@Test
+	public void singleInstanceLazyThread() {
 		Runnable target = () -> log.info("Object id is {}.", SingleInstanceLazy.newInstance().hashCode());
 		Thread t1 = new Thread(target);
 		Thread t2 = new Thread(target);
@@ -38,8 +37,9 @@ public class SingleInstanceExample {
 		t2.start();
 		t3.start();
 	}
-	
-	static void singleInstanceLazyUsingStaticInnerClassThread() {
+
+	@Test
+	public void singleInstanceLazyUsingStaticInnerClassThread() {
 		Runnable target = () -> log.info("Object id is {}.", SingleInstanceLazyUsingStaticInnerClass.getInstance().hashCode());
 		Thread t1 = new Thread(target);
 		Thread t2 = new Thread(target);
@@ -48,13 +48,15 @@ public class SingleInstanceExample {
 		t2.start();
 		t3.start();
 	}
-	
-	static void usingStaticInnerClassWithSerializing() {
+
+	@Test
+	public void usingStaticInnerClassWithSerializing() {
 		out();
 		in();
 	}
-	
-	static void out() {
+
+	@Test
+	public void out() {
 		try {
 			SingleInstanceLazyUsingStaticInnerClass instance = SingleInstanceLazyUsingStaticInnerClass.getInstance();
 			String filepath = System.getProperty("user.dir") + "/src/zychaowill/discover/research/pattern/single.txt";
@@ -66,8 +68,9 @@ public class SingleInstanceExample {
 			e.printStackTrace();
 		}
 	}
-	
-	static void in() {
+
+	@Test
+	public void in() {
 		try {
 			String filepath = System.getProperty("user.dir") + "/src/zychaowill/discover/research/pattern/single.txt";
 			ObjectInputStream in = new ObjectInputStream(new FileInputStream(new File(filepath)));

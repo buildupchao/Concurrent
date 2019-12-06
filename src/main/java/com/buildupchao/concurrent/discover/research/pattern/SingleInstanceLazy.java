@@ -1,16 +1,18 @@
 package com.buildupchao.concurrent.discover.research.pattern;
 
-import java.util.Objects;
-
+/**
+ * @author buildupchao
+ */
 public class SingleInstanceLazy {
 
 	private volatile static SingleInstanceLazy instance;
 	
 	public static SingleInstanceLazy newInstance() {
-		if (Objects.isNull(instance)) {
+		if (instance == null) {
 			synchronized (SingleInstanceLazy.class) {
-				if (Objects.isNull(instance))
+				if (instance == null) {
 					instance = new SingleInstanceLazy();
+				}
 			}
 		}
 		return instance;
