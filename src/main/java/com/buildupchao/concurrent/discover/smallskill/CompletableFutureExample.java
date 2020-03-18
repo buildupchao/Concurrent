@@ -1,8 +1,12 @@
-package com.buildupchao.concurrent.discover.smallskill.basic;
+package com.buildupchao.concurrent.discover.smallskill;
 
 import java.util.concurrent.CompletableFuture;
 import java.util.concurrent.ExecutionException;
 
+/**
+ * @author buildupchao
+ * @date 2017/8/17
+ */
 public class CompletableFutureExample {
 
 	public static void main(String[] args) {

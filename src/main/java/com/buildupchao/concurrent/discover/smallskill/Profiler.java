@@ -1,10 +1,10 @@
-package com.buildupchao.concurrent.discover.smallskill.communication.threadlocal;
+package com.buildupchao.concurrent.discover.smallskill;
 
 import java.util.concurrent.TimeUnit;
 
 /**
  * @author buildupchao
- * @date 2019-09-14 18:52
+ * @date 2019/9/14 18:52
  * @since JDK 1.8
  */
 public class Profiler {

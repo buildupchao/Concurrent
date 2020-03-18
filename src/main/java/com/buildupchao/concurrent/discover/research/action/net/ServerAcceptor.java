@@ -15,7 +15,7 @@ import com.google.common.collect.Queues;
 
 /**
  * @author buildupchao
- *         Date: 2019/3/17 19:07
+ * @date 2019/3/17 19:07
  * @since JDK 1.8
  */
 public class ServerAcceptor implements Runnable {

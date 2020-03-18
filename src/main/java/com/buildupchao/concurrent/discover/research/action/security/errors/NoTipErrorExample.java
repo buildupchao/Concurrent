@@ -4,7 +4,7 @@ package com.buildupchao.concurrent.discover.research.action.security.errors;
  * Stack over flow problem.
  * @see
  *
- * @author jangz
+ * @author buildupchao
  * @since
  */
 public class NoTipErrorExample {

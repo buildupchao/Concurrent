@@ -2,7 +2,7 @@ package com.buildupchao.concurrent.discover.research.action.pool.threadpool;
 
 /**
  * @author buildupchao
- * @date 2019-09-14 22:23
+ * @date 2019/9/14 22:23
  * @since JDK 1.8
  */
 public interface SimpleThreadPool<Job extends Runnable> {

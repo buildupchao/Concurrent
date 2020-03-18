@@ -11,7 +11,7 @@ import java.nio.file.Paths;
 
 /**
  * @author buildupchao
- * @date 2019-09-14 23:20
+ * @date 2019/9/14 23:20
  * @since JDK 1.8
  */
 public class SimpleHttpServer {

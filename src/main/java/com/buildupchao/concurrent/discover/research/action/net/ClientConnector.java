@@ -7,7 +7,7 @@ import java.net.Socket;
 
 /**
  * @author buildupchao
- *         Date: 2019/3/17 19:01
+ * @date 2019/3/17 19:01
  * @since JDK 1.8
  */
 public class ClientConnector implements Runnable {

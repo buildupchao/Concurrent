@@ -5,7 +5,7 @@ import java.util.LinkedList;
 
 /**
  * @author buildupchao
- * @date 2019-09-14 21:45
+ * @date 2019/9/14 21:45
  * @since JDK 1.8
  */
 public class ConnectionPool {

@@ -6,7 +6,7 @@ import java.util.ArrayList;
  * Advise: Please replace ArrayList with Vector.
  * @see
  *
- * @author jangz
+ * @author buildupchao
  * @since
  */
 public class ArrayListBasedOnConcurrentExample {

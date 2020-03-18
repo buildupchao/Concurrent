@@ -14,7 +14,7 @@ import com.google.common.collect.Queues;
 /**
  *   线程方式执行失败转串行执行
  * @author buildupchao
- *         Date: 2019/03/18 11:57
+ * @date 2019/03/18 11:57
  * @since JDK 1.8
  */
 public class SerialRejectThreadPoolExample {

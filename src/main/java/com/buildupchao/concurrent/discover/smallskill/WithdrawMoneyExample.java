@@ -1,4 +1,4 @@
-package com.buildupchao.concurrent.discover.smallskill.communication.waitnotify;
+package com.buildupchao.concurrent.discover.smallskill;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -6,10 +6,10 @@ import java.util.concurrent.CountDownLatch;
 
 /**
  * @author buildupchao
- * @date: 2019/4/26 02:56
+ * @date: 2017/4/26 02:56
  * @since JDK 1.8
  */
-public class MyLock {
+public class WithdrawMoneyExample {
     /**
      * 测试转账的main方法
      *

@@ -8,7 +8,7 @@ import java.util.concurrent.atomic.AtomicInteger;
 
 /**
  * @author buildupchao
- * @date 2019-09-14 22:27
+ * @date 2019/9/14 22:27
  * @since JDK 1.8
  */
 public class DefaultSimpleThreadPool<Job extends Runnable> implements SimpleThreadPool<Job> {

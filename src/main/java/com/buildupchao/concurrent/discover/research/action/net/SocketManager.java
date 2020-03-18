@@ -11,7 +11,7 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * @author buildupchao
- *         Date: 2019/3/17 19:08
+ * @date 2019/3/17 19:08
  * @since JDK 1.8
  */
 public class SocketManager {
