@@ -23,7 +23,7 @@ import com.lmax.disruptor.dsl.ProducerType;
 
 /**
  * @author buildupchao
- *         Date: 2019/3/16 03:40
+ * @date 2019/3/16
  * @since JDK 1.8
  */
 public class DisruptorTest {

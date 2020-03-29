@@ -5,6 +5,11 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class CountDownLatchExample implements Runnable {
 
 	static final CountDownLatch end = new CountDownLatch(10);

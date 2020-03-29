@@ -6,6 +6,11 @@ import java.util.stream.Collectors;
 
 import com.buildupchao.concurrent.utils.NumberFactory;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class SortedForkJoinExample {
 
 	public static void main(String[] args) {

@@ -5,7 +5,9 @@ import com.lmax.disruptor.RingBuffer;
 import java.nio.ByteBuffer;
 
 /**
- * Created by jangz on 2019/1/9.
+ * @author buildupchao
+ * @date 2019/1/9
+ * @since JDK 1.8
  */
 public class LongEventProducer {
 

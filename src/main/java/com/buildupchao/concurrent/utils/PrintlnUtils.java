@@ -4,6 +4,11 @@ import java.io.File;
 import java.io.FileOutputStream;
 import java.io.OutputStream;
 
+/**
+ * @author buildupchao
+ * @date 2019/1/9
+ * @since JDK 1.8
+ */
 public class PrintlnUtils {
 
 	private static final String BASE = System.getProperty("user.dir");

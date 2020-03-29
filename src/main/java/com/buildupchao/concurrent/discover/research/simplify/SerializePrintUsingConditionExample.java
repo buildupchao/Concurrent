@@ -5,6 +5,11 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 @Slf4j
 public class SerializePrintUsingConditionExample {
 	
@@ -34,12 +39,14 @@ public class SerializePrintUsingConditionExample {
 	
 	private static Thread getAPrinter() {
 		return new Thread(() -> {
+			lock.lock();
 			try {
-				lock.lock();
-				while (nextPrintWho != 1)
+				while (nextPrintWho != 1) {
 					conditionA.await();
-				for (int i = 0; i < 3; i++)
+				}
+				for (int i = 0; i < 3; i++) {
 					log.info("Printer A {}.", (i + 1));
+				}
 				nextPrintWho = 2;
 				conditionB.signalAll();
 			} catch (InterruptedException e) {
@@ -52,12 +59,14 @@ public class SerializePrintUsingConditionExample {
 	
 	private static Thread getBPrinter() {
 		return new Thread(() -> {
+			lock.lock();
 			try {
-				lock.lock();
-				while (nextPrintWho != 2)
+				while (nextPrintWho != 2) {
 					conditionB.await();
-				for (int i = 0; i < 3; i++)
+				}
+				for (int i = 0; i < 3; i++) {
 					log.info("Printer B {}.", (i + 1));
+				}
 				nextPrintWho = 3;
 				conditionC.signalAll();
 			} catch (InterruptedException e) {
@@ -70,12 +79,14 @@ public class SerializePrintUsingConditionExample {
 	
 	private static Thread getCPrinter() {
 		return new Thread(() -> {
+			lock.lock();
 			try {
-				lock.lock();
-				while (nextPrintWho != 3)
+				while (nextPrintWho != 3) {
 					conditionC.await();
-				for (int i = 0; i < 3; i++)
+				}
+				for (int i = 0; i < 3; i++) {
 					log.info("Printer C {}.", (i + 1));
+				}
 				nextPrintWho = 1;
 				conditionA.signalAll();
 			} catch (InterruptedException e) {

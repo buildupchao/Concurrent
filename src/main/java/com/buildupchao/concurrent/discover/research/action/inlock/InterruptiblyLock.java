@@ -2,6 +2,11 @@ package com.buildupchao.concurrent.discover.research.action.inlock;
 
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class InterruptiblyLock implements Runnable {
 	public static ReentrantLock lock1 = new ReentrantLock();
 	public static ReentrantLock lock2 = new ReentrantLock();

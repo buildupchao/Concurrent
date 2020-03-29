@@ -7,6 +7,7 @@ import java.util.ArrayList;
  * @see
  *
  * @author buildupchao
+ * @date 2018/05/20
  * @since
  */
 public class ArrayListBasedOnConcurrentExample {

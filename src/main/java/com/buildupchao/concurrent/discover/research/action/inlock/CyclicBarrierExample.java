@@ -4,6 +4,11 @@ import java.util.Random;
 import java.util.concurrent.BrokenBarrierException;
 import java.util.concurrent.CyclicBarrier;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class CyclicBarrierExample {
 	public static class Soldier implements Runnable {
 		private String soldier;

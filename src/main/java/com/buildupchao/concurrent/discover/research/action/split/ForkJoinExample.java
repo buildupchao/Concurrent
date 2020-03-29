@@ -5,6 +5,11 @@ import java.util.Comparator;
 import java.util.concurrent.RecursiveAction;
 import java.util.stream.Collectors;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class ForkJoinExample<T> extends RecursiveAction {
 
 	private static final long serialVersionUID = 2213814119162737975L;

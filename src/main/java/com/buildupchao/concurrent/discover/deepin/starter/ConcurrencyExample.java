@@ -3,7 +3,9 @@ package com.buildupchao.concurrent.discover.deepin.starter;
 import lombok.extern.slf4j.Slf4j;
 
 /**
- * Created by yachao on 2018/6/22.
+ * @author buildupchao
+ * @date 2018/6/22
+ * @since JDK1.8
  */
 @Slf4j
 public class ConcurrencyExample {

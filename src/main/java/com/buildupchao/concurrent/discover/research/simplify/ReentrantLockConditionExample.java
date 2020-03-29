@@ -2,6 +2,11 @@ package com.buildupchao.concurrent.discover.research.simplify;
 
 import lombok.AllArgsConstructor;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class ReentrantLockConditionExample {
 
 	public static void main(String[] args) throws InterruptedException {

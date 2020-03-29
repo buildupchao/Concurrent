@@ -9,6 +9,11 @@ import java.util.TimerTask;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 @Slf4j
 public class TimerExample {
 	

@@ -4,6 +4,11 @@ import java.util.Arrays;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class SynchronizedListExample {
 
 	public static void main(String[] args) {

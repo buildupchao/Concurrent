@@ -3,6 +3,11 @@ package com.buildupchao.concurrent.discover.research.action.inlock.philosopher;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class DeadLockExample {
 	
 	public static void main(String[] args) throws InterruptedException {

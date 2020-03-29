@@ -5,7 +5,7 @@ import com.lmax.disruptor.EventHandler;
 
 /**
  * @author buildupchao
- *         Date: 2019/3/16 03:47
+ * @date 2019/3/16
  * @since JDK 1.8
  */
 public class ThirdEventHandler implements EventHandler<LongEvent> {

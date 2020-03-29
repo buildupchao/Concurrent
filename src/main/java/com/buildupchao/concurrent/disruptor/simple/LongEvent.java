@@ -3,7 +3,9 @@ package com.buildupchao.concurrent.disruptor.simple;
 import lombok.Data;
 
 /**
- * Created by jangz on 2019/1/9.
+ * @author buildupchao
+ * @date 2019/1/9
+ * @since JDK 1.8
  */
 @Data
 public class LongEvent {

@@ -3,6 +3,11 @@ package com.buildupchao.concurrent.discover.research.action.inlock;
 import java.util.Random;
 import java.util.concurrent.CountDownLatch;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class DoWorkBasedOnCountDownLatchExample {
 
 	public static class Soldier implements Runnable {

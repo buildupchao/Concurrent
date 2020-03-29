@@ -3,6 +3,11 @@ package com.buildupchao.concurrent.discover.research.action.split;
 import java.util.Comparator;
 import java.util.concurrent.RecursiveAction;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class SortedForkJoin<T> extends RecursiveAction {
 
 	private static final long serialVersionUID = -8399694888847226385L;

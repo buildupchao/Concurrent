@@ -7,7 +7,10 @@ package com.buildupchao.concurrent.disruptor.examples;
  */
 public class FalseSharing implements Runnable {
 
-    public static final int NUM_THREADS = 4; // change
+    /**
+     * change
+     */
+    public static final int NUM_THREADS = 4;
     public static final long ITERATIONS = 500L * 1000L * 1000L;
     private final int arrayIndex;
 

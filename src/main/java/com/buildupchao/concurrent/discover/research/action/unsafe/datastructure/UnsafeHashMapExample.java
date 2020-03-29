@@ -2,6 +2,11 @@ package com.buildupchao.concurrent.discover.research.action.unsafe.datastructure
 
 import java.util.HashMap;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class UnsafeHashMapExample {
 	
 	public static void main(String[] args) throws InterruptedException {

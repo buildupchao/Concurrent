@@ -2,6 +2,11 @@ package com.buildupchao.concurrent.utils;
 
 import java.util.Random;
 
+/**
+ * @author buildupchao
+ * @date 2019/1/9
+ * @since JDK 1.8
+ */
 public class NumberFactory {
 
 	public static Integer[] integers(Integer size) {

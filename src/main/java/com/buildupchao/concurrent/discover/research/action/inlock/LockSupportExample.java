@@ -1,7 +1,13 @@
 package com.buildupchao.concurrent.discover.research.action.inlock;
 
+import java.util.concurrent.TimeUnit;
 import java.util.concurrent.locks.LockSupport;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class LockSupportExample {
 	public static byte[] LOCK = new byte[0];
 	static ChangeObjectThread t1 = new ChangeObjectThread("t1");
@@ -16,7 +22,8 @@ public class LockSupportExample {
 		public void run() {
 			synchronized (LOCK) {
 				System.out.println("in " + getName());
-				LockSupport.park();
+				LockSupport.parkNanos(TimeUnit.SECONDS.toNanos(5));
+				System.out.println("out " + getName());
 			}
 		}
 	}

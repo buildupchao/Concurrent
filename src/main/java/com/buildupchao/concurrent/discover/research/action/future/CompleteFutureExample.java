@@ -4,6 +4,11 @@ import java.util.concurrent.CompletableFuture;
 
 import com.buildupchao.concurrent.utils.PrintlnUtils;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class CompleteFutureExample {
 
 	public static void main(String[] args) {

@@ -3,9 +3,14 @@ package com.buildupchao.concurrent.discover.research.action;
 import java.sql.Timestamp;
 import java.time.Instant;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class WaitNotifyExample {
 
-	final static Object LOCK = new Object();
+	final static byte[] LOCK = new byte[0];
 	
 	public static class T1 extends Thread {
 		@Override

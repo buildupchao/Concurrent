@@ -3,6 +3,11 @@ package com.buildupchao.concurrent.discover.research.action.datastructure;
 import java.util.concurrent.CopyOnWriteArrayList;
 import java.util.concurrent.CopyOnWriteArraySet;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class CopyOnWriteArrayListExample {
 
 	public static void main(String[] args) {

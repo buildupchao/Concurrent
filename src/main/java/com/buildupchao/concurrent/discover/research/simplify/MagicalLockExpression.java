@@ -6,6 +6,11 @@ import java.util.concurrent.locks.ReentrantLock;
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 @Getter
 @Slf4j
 public class MagicalLockExpression {

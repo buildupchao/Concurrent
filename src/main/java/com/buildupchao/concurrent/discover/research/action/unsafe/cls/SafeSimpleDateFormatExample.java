@@ -5,6 +5,11 @@ import java.text.SimpleDateFormat;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class SafeSimpleDateFormatExample {
 
 	public static void main(String[] args) throws InterruptedException {

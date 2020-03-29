@@ -1,5 +1,10 @@
 package com.buildupchao.concurrent.discover.research.action.inlock.philosopher;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class Philosopher implements Runnable {
 
 	private Chopstick left;

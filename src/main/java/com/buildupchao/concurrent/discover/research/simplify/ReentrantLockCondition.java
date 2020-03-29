@@ -6,6 +6,11 @@ import java.util.concurrent.locks.ReentrantLock;
 
 import lombok.extern.slf4j.Slf4j;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 @Slf4j
 public class ReentrantLockCondition {
 
@@ -14,8 +19,8 @@ public class ReentrantLockCondition {
 	private Condition conditionB = lock.newCondition();
 	
 	public void await() {
+		lock.lock();
 		try {
-			lock.lock();
 			log.info("[await] start to execute...");
 			conditionA.await();
 			log.info("[await] end to execute...");
@@ -28,8 +33,8 @@ public class ReentrantLockCondition {
 	}
 	
 	public void awaitAgain() {
+		lock.lock();
 		try {
-			lock.lock();
 			log.info("[awaitAgain] start to execute...");
 			conditionB.await();
 			log.info("[awaitAgain] end to execute...");
@@ -42,8 +47,8 @@ public class ReentrantLockCondition {
 	}
 
 	public void signal() {
+		lock.lock();
 		try {
-			lock.lock();
 			log.info("[signal] is coming! Current time is {}.", System.currentTimeMillis());
 			conditionA.signalAll();
 		} finally {
@@ -52,8 +57,8 @@ public class ReentrantLockCondition {
 	}
 	
 	public void signalAgain() {
+		lock.lock();
 		try {
-			lock.lock();
 			log.info("[signalAgain] is coming! Current time is {}.", System.currentTimeMillis());
 			conditionB.signalAll();
 		} finally {

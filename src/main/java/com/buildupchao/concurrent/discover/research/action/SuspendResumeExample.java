@@ -1,5 +1,10 @@
 package com.buildupchao.concurrent.discover.research.action;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class SuspendResumeExample {
 
 	public static byte[] LOCK = new byte[0];

@@ -6,6 +6,11 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.ForkJoinTask;
 import java.util.concurrent.RecursiveTask;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class SumBasedOnForkJoinExample extends RecursiveTask<Long> {
 
 	private static final long serialVersionUID = 8392032364411100616L;

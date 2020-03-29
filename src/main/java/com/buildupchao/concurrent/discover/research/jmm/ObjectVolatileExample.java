@@ -1,5 +1,10 @@
 package com.buildupchao.concurrent.discover.research.jmm;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class ObjectVolatileExample {
 	static volatile Flag flag = new Flag();
 
@@ -23,8 +28,9 @@ public class ObjectVolatileExample {
 		while (true) {
 		}
 	}
+
+	static class Flag {
+		String flag = "A";
+	}
 }
 
-class Flag {
-	String flag = "A";
-}

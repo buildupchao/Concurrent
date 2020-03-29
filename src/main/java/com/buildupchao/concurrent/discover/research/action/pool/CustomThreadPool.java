@@ -6,7 +6,9 @@ import java.util.LinkedList;
 import java.util.List;
 
 /**
- * Created by buildupchao on 18/5/20.
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
  */
 @Slf4j
 public final class CustomThreadPool {

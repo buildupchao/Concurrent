@@ -3,7 +3,8 @@ package com.buildupchao.concurrent.discover.research.jmm;
 /**
  * @see
  *
- * @author jangz
+ * @author buildupchao
+ * @date 2018/05/20
  * @since
  */
 public class AtomicityVolatileExample {

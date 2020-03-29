@@ -4,7 +4,8 @@ package com.buildupchao.concurrent.discover.research.jmm;
  * Will generate error numbers, if based on 32-bit JVM.
  * @see
  *
- * @author jangz
+ * @author buildupchao
+ * @date 2018/05/20
  * @since
  */
 public class AtomicityExample {

@@ -9,6 +9,11 @@ import java.util.concurrent.Future;
 
 import com.buildupchao.concurrent.discover.research.domain.User;
 
+/**
+ * @author buildupchao
+ * @date 2018/07/11
+ * @since JDK1.8
+ */
 public class CountDownLatchNewExample {
 
 	private List<User> getUsersFromRemote() {

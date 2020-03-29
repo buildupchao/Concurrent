@@ -18,6 +18,11 @@ import lombok.Data;
 import lombok.Getter;
 import lombok.Setter;
 
+/**
+ * @author buildupchao
+ * @date 2018/05/20
+ * @since JDK1.8
+ */
 public class RejectThreadPoolBasedOnExecuteExample {
 	
 	private static final Logger LOGGER = LoggerFactory.getLogger(RejectThreadPoolBasedOnExecuteExample.class);
