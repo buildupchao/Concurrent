@@ -10,7 +10,7 @@ import java.util.concurrent.locks.Lock;
  * @date 2020/03/30 00:29
  * @since JDK 1.8
  */
-public class MyMutex implements Lock {
+public class Mutex implements Lock {
 
     private static class Sync extends AbstractQueuedSynchronizer {
         @Override
