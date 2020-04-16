@@ -20,12 +20,12 @@ public class FairLock {
 	}
 	
 	public void tryFairLock() {
+		lock.lock();
 		try {
-			lock.lock();
 			log.info("[tryFairLock] Thread name is {}, hold lock!", Thread.currentThread().getName());
 		} finally {
-			log.info("[tryFairLock] Thread name is {}, release lock!", Thread.currentThread().getName());
 			lock.unlock();
+			log.info("[tryFairLock] Thread name is {}, release lock!", Thread.currentThread().getName());
 		}
 	}
 }
